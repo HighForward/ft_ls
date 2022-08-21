@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ft_traceroute"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_traceroute">
+				<Option output="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/ft_traceroute" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_traceroute"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_traceroute/fast">
+				<Option output="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/ft_traceroute" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_traceroute/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/nfs/homes/mbrignol/Desktop/trqceroute/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/srcs/args.c">
+			<Option target="ft_traceroute"/>
+		</Unit>
+		<Unit filename="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/srcs/dns.c">
+			<Option target="ft_traceroute"/>
+		</Unit>
+		<Unit filename="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/srcs/io_pkt.c">
+			<Option target="ft_traceroute"/>
+		</Unit>
+		<Unit filename="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/srcs/main.c">
+			<Option target="ft_traceroute"/>
+		</Unit>
+		<Unit filename="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/srcs/pkt.c">
+			<Option target="ft_traceroute"/>
+		</Unit>
+		<Unit filename="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/srcs/utils.c">
+			<Option target="ft_traceroute"/>
+		</Unit>
+		<Unit filename="/mnt/nfs/homes/mbrignol/Desktop/trqceroute/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
