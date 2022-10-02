@@ -1,4 +1,7 @@
-SRCS		=	./srcs/main.c
+SRCS		=	./srcs/main.c \
+				./srcs/format.c \
+				./srcs/error.c \
+#				./srcs/utils.c
 
 NAME		=	ft_ls
 
@@ -19,20 +22,25 @@ ${OBJS_DIR}/%.o: %.c
 
 all: ${NAME}
 
-#link:
-# 				@#$(MAKE) -C ../libft/
+link:
+				@$(MAKE) bonus -C ./libft/
 
-${NAME}: ${OBJS} ${H}
-			    @$(CC) ${OBJS} -Wall -Wextra -Werror -o ${NAME}
+${NAME}: ${OBJS} ${H} link
+			    @$(CC) ${OBJS} -Wall -Wextra -Werror -L ./libft -lft -o ${NAME}
 			    @echo "\033[1;32m > Building <\033[0m\033[1;36m ${NAME}\033[0m"
 
 clean:
 				@${RM} ${OBJS}
+				@$(MAKE) clean -C ./libft/
 				@echo "\033[1;31m > Deleting <\033[0m\033[1;35m .o files\033[0m"
 
 fclean: clean
 			    @${RM} $(NAME)
+				@$(MAKE) fclean -C ./libft/
 			    @echo "\033[1;31m > Deleting <\033[0m\033[1;35m ${NAME} \033[0m"
+
+run: all
+		./ft_ls
 
 re:	fclean all
 
