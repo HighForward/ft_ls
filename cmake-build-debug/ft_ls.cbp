@@ -8,78 +8,254 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ft_ls">
-				<Option output="/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/ft_ls" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_ls"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ft_ls/fast">
-				<Option output="/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/ft_ls" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_ls/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_ls">
+				<Option output="/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/ft_ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_ls"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_ls/fast">
+				<Option output="/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/ft_ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_ls/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/M4x/Desktop/42/ft_ls/srcs/main.c">
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_atoi.c">
 			<Option target="ft_ls"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/M4x/Desktop/42/ft_ls/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_bzero.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_calloc.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isalnum.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isalpha.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isascii.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isdigit.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isprint.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_itoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstadd_back_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstadd_front_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstclear_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstdelone_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstiter_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstlast_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstmap_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstnew_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstrev.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstsize_bonus.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memccpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memchr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memcmp.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memcpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memmove.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memset.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putchar.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putchar_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putendl_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putnbr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putnbr_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putstr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putstr_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_split.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strchr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strcpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strdup.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strjoin.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strlcat.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strlcpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strlen.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strmapi.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strncat.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strncmp.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strnew.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strnstr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strrchr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strtrim.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_substr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_tolower.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_toupper.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/args.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/error.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/format.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/free.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/main.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/output.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/parse_dir.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/recursive.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/utils.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

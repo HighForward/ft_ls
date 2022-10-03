@@ -1,10 +1,4 @@
-C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /usr/bin/zsh -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/M4x/Desktop/42/ft_ls -B /mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug"
--- The C compiler identification is GNU 9.4.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/Forward/Desktop/42/ft_ls
 -- Configuring done
 -- Generating done
--- Build files have been written to: /mnt/c/Users/M4x/Desktop/42/ft_ls/cmake-build-debug
+-- Build files have been written to: /mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug

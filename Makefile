@@ -1,7 +1,12 @@
 SRCS		=	./srcs/main.c \
 				./srcs/format.c \
 				./srcs/error.c \
-#				./srcs/utils.c
+				./srcs/parse_dir.c \
+				./srcs/free.c \
+				./srcs/output.c \
+				./srcs/args.c \
+				./srcs/recursive.c \
+				./srcs/utils.c
 
 NAME		=	ft_ls
 
