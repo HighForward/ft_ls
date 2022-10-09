@@ -8,6 +8,19 @@ ls_node	*ls_lstnew(void *content)
         return (NULL);
     new->content = content;
     new->next = NULL;
-    new->subdir = NULL;
     return (new);
+}
+
+
+char *ft_strcat(char *dst, char *to_cat) {
+
+    int i = 0;
+    int start_len = ft_strlen(dst);
+
+    while (to_cat && to_cat[i]) {
+        dst[start_len + i] = to_cat[i];
+        i++;
+    }
+    dst[start_len + i] = '\0';
+    return dst;
 }

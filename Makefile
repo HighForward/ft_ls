@@ -5,7 +5,6 @@ SRCS		=	./srcs/main.c \
 				./srcs/free.c \
 				./srcs/output.c \
 				./srcs/args.c \
-				./srcs/recursive.c \
 				./srcs/utils.c
 
 NAME		=	ft_ls

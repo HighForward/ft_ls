@@ -11,6 +11,7 @@
 #include <time.h>
 
 #include <grp.h>
+#include <pwd.h>
 
 typedef struct ls_content
 {
@@ -22,8 +23,6 @@ typedef struct ls_content
 typedef struct ls_node
 {
     ls_content *content;
-    char *dir_path;
-    struct ls_node *subdir;
     struct ls_node *next;
 
 } ls_node;
@@ -44,7 +43,9 @@ void str_error(char *error);
 
 
 /** PARSE DIR **/
-ls_node *process_dir(DIR *dp, char *dir_path);
+int dir_is_not_dot(char *dir);
+char *get_dir_path(char *curr_path, char *curr_dir);
+ls_node *process_dir(DIR *dp, ls_options *options);
 void lst_add_node_sort(ls_node **alst, ls_node *new);
 
 
@@ -53,7 +54,7 @@ int parse_args(int argc, char **argv, ls_options *options);
 
 
 /** OUTPUT **/
-void simple_print(ls_node *dir_nodes);
+void print_ls(ls_node *dir_nodes, char *path, ls_options *options);
 void print_long_listing(char *str);
 
 
@@ -63,12 +64,13 @@ void free_split(char **split);
 
 
 /** RECURSIVE **/
-void handle_recursive(ls_options *options);
 
 
 /** LST UTILS **/
 ls_node	*ls_lstnew(void *content);
 
 
+/** UTILS **/
+char *ft_strcat(char *dst, char *to_cat);
 
 #endif

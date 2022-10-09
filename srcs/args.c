@@ -17,7 +17,7 @@ void perform_h()
 int parse_args(int argc, char **argv, ls_options *options)
 {
     int i = 0;
-    char *arg;
+    char *arg = NULL;
     while (argv[i])
     {
         arg = argv[i];

@@ -1,6 +1,25 @@
 #include "../includes/ft_ls.h"
 
-ls_content *load_dir(struct dirent *dir) {
+int dir_is_not_dot(char *dir) {
+    if (ft_strncmp(dir, ".", ft_strlen(dir)) == 0 || ft_strncmp(dir, "..", ft_strlen(dir)) == 0)
+        return (1);
+    return (0);
+}
+
+char *get_dir_path(char *curr_path, char *curr_dir) {
+
+    char *tmp_str = NULL;
+    const int tmp_len = (int)ft_strlen(curr_path) + (int)ft_strlen(curr_dir) + 1; //+1 for the slash
+
+    tmp_str = ft_strnew(tmp_len);
+    tmp_str = ft_strcat(tmp_str, curr_path);
+    tmp_str = ft_strcat(tmp_str, "/");
+    tmp_str = ft_strcat(tmp_str, curr_dir);
+    return (tmp_str);
+}
+
+
+ls_content *load_dir_data(struct dirent *dir) {
 
     ls_content *content = NULL;
 
@@ -13,7 +32,7 @@ ls_content *load_dir(struct dirent *dir) {
     return (content);
 }
 
-ls_node *process_dir(DIR *dp, char *dir_path) {
+ls_node *process_dir(DIR *dp, ls_options *options) {
 
     ls_node *nodes = NULL;
     ls_content *content = NULL;
@@ -21,11 +40,13 @@ ls_node *process_dir(DIR *dp, char *dir_path) {
     struct dirent *dirp;
     while ((dirp = readdir(dp)) != NULL)
     {
-        if (!(content = load_dir(dirp)))
+        if (!options->all && ft_strlen(dirp->d_name) && dirp->d_name[0] == '.')
+            continue;
+
+        if (!(content = load_dir_data(dirp)))
             return (NULL);
 
         ls_node *tmp_new = ls_lstnew(content);
-        tmp_new->dir_path = dir_path;
         lst_add_node_sort(&nodes, tmp_new);
     }
     return nodes;
