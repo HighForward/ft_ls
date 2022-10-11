@@ -26,18 +26,43 @@ ls_content *load_dir_data(struct dirent *dir) {
     if (!(content = malloc(sizeof(struct ls_content)))) {
         return (NULL);
     }
+
+    ft_bzero(content, sizeof(struct ls_content));
     content->name = dir->d_name;
     content->type = dir->d_type;
 
     return (content);
 }
 
-ls_node *process_dir(DIR *dp, ls_options *options) {
+void load_listing(ls_content *content, char *path) {
+
+    if (content) {
+        struct stat sb;
+        ft_bzero(&sb, sizeof(struct stat));
+
+        char *dir_path = get_dir_path(path, content->name);
+
+        if (stat(dir_path, &sb) < 0) {
+            str_error("error stat");
+        }
+
+        free(dir_path);
+
+        content->nb_link = 1;
+        content->u_name = getpwuid(sb.st_uid)->pw_name;
+        content->g_name = getgrgid(sb.st_gid)->gr_name;
+        content->octets = sb.st_size;
+        get_ls_time_format(content, sb.st_ctime);
+    }
+}
+
+ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
 
     ls_node *nodes = NULL;
     ls_content *content = NULL;
 
-    struct dirent *dirp;
+    struct dirent *dirp = NULL;
+
     while ((dirp = readdir(dp)) != NULL)
     {
         if (!options->all && ft_strlen(dirp->d_name) && dirp->d_name[0] == '.')
@@ -46,9 +71,17 @@ ls_node *process_dir(DIR *dp, ls_options *options) {
         if (!(content = load_dir_data(dirp)))
             return (NULL);
 
+        if (options->long_list) {
+            load_listing(content, path);
+        }
+
         ls_node *tmp_new = ls_lstnew(content);
+
+
         lst_add_node_sort(&nodes, tmp_new);
     }
+
+//    free(dp);
     return nodes;
 }
 

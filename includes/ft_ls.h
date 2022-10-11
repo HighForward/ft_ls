@@ -13,10 +13,17 @@
 #include <grp.h>
 #include <pwd.h>
 
+#define LS_TIME_SIZE 40
+
 typedef struct ls_content
 {
     char *name;
     unsigned char type;
+    int nb_link;
+    char *u_name;
+    char *g_name;
+    long long octets;
+    char time[LS_TIME_SIZE];
 
 } ls_content;
 
@@ -45,7 +52,7 @@ void str_error(char *error);
 /** PARSE DIR **/
 int dir_is_not_dot(char *dir);
 char *get_dir_path(char *curr_path, char *curr_dir);
-ls_node *process_dir(DIR *dp, ls_options *options);
+ls_node *process_dir(DIR *dp, char *path, ls_options *options);
 void lst_add_node_sort(ls_node **alst, ls_node *new);
 
 
@@ -55,8 +62,10 @@ int parse_args(int argc, char **argv, ls_options *options);
 
 /** OUTPUT **/
 void print_ls(ls_node *dir_nodes, char *path, ls_options *options);
-void print_long_listing(char *str);
+void print_listing(ls_node *dir_nodes);
 
+/** FORMAT **/
+void get_ls_time_format(ls_content *content, time_t time);
 
 /** FREE **/
 void free_nodes(ls_node *nodes);

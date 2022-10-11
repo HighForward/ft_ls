@@ -8,7 +8,7 @@ int process_ls(char *path, ls_options *options) {
     if (dp == NULL)
         str_error("unhandled dir errors\n");
 
-    ls_node *dir_nodes = process_dir(dp, options);
+    ls_node *dir_nodes = process_dir(dp, path, options);
 
     if (dir_nodes) {
 
