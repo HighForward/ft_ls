@@ -10,17 +10,21 @@ int process_ls(char *path, ls_options *options) {
 
     ls_node *dir_nodes = process_dir(dp, path, options);
 
+    print_ls(dir_nodes, path, options);
+
     if (dir_nodes) {
 
         ls_node *iterator = dir_nodes;
-
-        print_ls(dir_nodes, path, options);
 
         while (options->recursive && iterator != NULL) {
 
             if (iterator->content->type == DT_DIR && dir_is_not_dot(iterator->content->name) == 0) {
 
                 char *tmp_str = get_dir_path(path, iterator->content->name);
+
+                if (options->recursive) {
+                    ft_putstr("\n");
+                }
 
                 if (process_ls(tmp_str, options))
                     return (EXIT_SUCCESS);

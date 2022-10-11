@@ -1662,33 +1662,6 @@ srcs/parse_dir.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/srcs/parse_dir.c.s
 .PHONY : srcs/parse_dir.c.s
 
-srcs/recursive.o: srcs/recursive.c.o
-
-.PHONY : srcs/recursive.o
-
-# target to build an object file
-srcs/recursive.c.o:
-	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/srcs/recursive.c.o
-.PHONY : srcs/recursive.c.o
-
-srcs/recursive.i: srcs/recursive.c.i
-
-.PHONY : srcs/recursive.i
-
-# target to preprocess a source file
-srcs/recursive.c.i:
-	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/srcs/recursive.c.i
-.PHONY : srcs/recursive.c.i
-
-srcs/recursive.s: srcs/recursive.c.s
-
-.PHONY : srcs/recursive.s
-
-# target to generate assembly for a file
-srcs/recursive.c.s:
-	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/srcs/recursive.c.s
-.PHONY : srcs/recursive.c.s
-
 srcs/utils.o: srcs/utils.c.o
 
 .PHONY : srcs/utils.o
@@ -1896,9 +1869,6 @@ help:
 	@echo "... srcs/parse_dir.o"
 	@echo "... srcs/parse_dir.i"
 	@echo "... srcs/parse_dir.s"
-	@echo "... srcs/recursive.o"
-	@echo "... srcs/recursive.i"
-	@echo "... srcs/recursive.s"
 	@echo "... srcs/utils.o"
 	@echo "... srcs/utils.i"
 	@echo "... srcs/utils.s"

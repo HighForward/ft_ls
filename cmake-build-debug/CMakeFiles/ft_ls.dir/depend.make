@@ -178,9 +178,6 @@ CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o: ../includes/ft_ls.h
 CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o: ../includes/libft.h
 CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o: ../srcs/parse_dir.c
 
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o: ../includes/ft_ls.h
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o: ../includes/libft.h
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o: ../srcs/recursive.c
 
 CMakeFiles/ft_ls.dir/srcs/utils.c.o: ../includes/ft_ls.h
 CMakeFiles/ft_ls.dir/srcs/utils.c.o: ../includes/libft.h

@@ -225,33 +225,9 @@ CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o.provides: CMakeFiles/ft_ls.dir/srcs/pars
 CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o.provides.build: CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o
 
 
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o: CMakeFiles/ft_ls.dir/flags.make
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o: ../srcs/recursive.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_ls.dir/srcs/recursive.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/srcs/recursive.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/recursive.c
-
-CMakeFiles/ft_ls.dir/srcs/recursive.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ls.dir/srcs/recursive.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/recursive.c > CMakeFiles/ft_ls.dir/srcs/recursive.c.i
-
-CMakeFiles/ft_ls.dir/srcs/recursive.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ls.dir/srcs/recursive.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/recursive.c -o CMakeFiles/ft_ls.dir/srcs/recursive.c.s
-
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o.requires:
-
-.PHONY : CMakeFiles/ft_ls.dir/srcs/recursive.c.o.requires
-
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o.provides: CMakeFiles/ft_ls.dir/srcs/recursive.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/srcs/recursive.c.o.provides.build
-.PHONY : CMakeFiles/ft_ls.dir/srcs/recursive.c.o.provides
-
-CMakeFiles/ft_ls.dir/srcs/recursive.c.o.provides.build: CMakeFiles/ft_ls.dir/srcs/recursive.c.o
-
-
 CMakeFiles/ft_ls.dir/srcs/utils.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/srcs/utils.c.o: ../srcs/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_ls.dir/srcs/utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_ls.dir/srcs/utils.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/srcs/utils.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/utils.c
 
 CMakeFiles/ft_ls.dir/srcs/utils.c.i: cmake_force
@@ -275,7 +251,7 @@ CMakeFiles/ft_ls.dir/srcs/utils.c.o.provides.build: CMakeFiles/ft_ls.dir/srcs/ut
 
 CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_atoi.c
 
 CMakeFiles/ft_ls.dir/libft/ft_atoi.c.i: cmake_force
@@ -299,7 +275,7 @@ CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o.provides.build: CMakeFiles/ft_ls.dir/libf
 
 CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o: ../libft/ft_bzero.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_bzero.c
 
 CMakeFiles/ft_ls.dir/libft/ft_bzero.c.i: cmake_force
@@ -323,7 +299,7 @@ CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o.provides.build: CMakeFiles/ft_ls.dir/lib
 
 CMakeFiles/ft_ls.dir/libft/ft_calloc.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_calloc.c.o: ../libft/ft_calloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_ls.dir/libft/ft_calloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_ls.dir/libft/ft_calloc.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_calloc.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_calloc.c
 
 CMakeFiles/ft_ls.dir/libft/ft_calloc.c.i: cmake_force
@@ -347,7 +323,7 @@ CMakeFiles/ft_ls.dir/libft/ft_calloc.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_isalnum.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_isalnum.c.o: ../libft/ft_isalnum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isalnum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isalnum.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_isalnum.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isalnum.c
 
 CMakeFiles/ft_ls.dir/libft/ft_isalnum.c.i: cmake_force
@@ -371,7 +347,7 @@ CMakeFiles/ft_ls.dir/libft/ft_isalnum.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_isalpha.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_isalpha.c.o: ../libft/ft_isalpha.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isalpha.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isalpha.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_isalpha.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isalpha.c
 
 CMakeFiles/ft_ls.dir/libft/ft_isalpha.c.i: cmake_force
@@ -395,7 +371,7 @@ CMakeFiles/ft_ls.dir/libft/ft_isalpha.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_isascii.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_isascii.c.o: ../libft/ft_isascii.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isascii.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isascii.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_isascii.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isascii.c
 
 CMakeFiles/ft_ls.dir/libft/ft_isascii.c.i: cmake_force
@@ -419,7 +395,7 @@ CMakeFiles/ft_ls.dir/libft/ft_isascii.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_isdigit.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_isdigit.c.o: ../libft/ft_isdigit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isdigit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isdigit.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_isdigit.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isdigit.c
 
 CMakeFiles/ft_ls.dir/libft/ft_isdigit.c.i: cmake_force
@@ -443,7 +419,7 @@ CMakeFiles/ft_ls.dir/libft/ft_isdigit.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_isprint.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_isprint.c.o: ../libft/ft_isprint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isprint.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft_ls.dir/libft/ft_isprint.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_isprint.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_isprint.c
 
 CMakeFiles/ft_ls.dir/libft/ft_isprint.c.i: cmake_force
@@ -467,7 +443,7 @@ CMakeFiles/ft_ls.dir/libft/ft_isprint.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_itoa.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft_ls.dir/libft/ft_itoa.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft_ls.dir/libft/ft_itoa.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_itoa.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_itoa.c
 
 CMakeFiles/ft_ls.dir/libft/ft_itoa.c.i: cmake_force
@@ -491,7 +467,7 @@ CMakeFiles/ft_ls.dir/libft/ft_itoa.c.o.provides.build: CMakeFiles/ft_ls.dir/libf
 
 CMakeFiles/ft_ls.dir/libft/ft_lstadd_back_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstadd_back_bonus.c.o: ../libft/ft_lstadd_back_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstadd_back_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstadd_back_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstadd_back_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstadd_back_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstadd_back_bonus.c.i: cmake_force
@@ -515,7 +491,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstadd_back_bonus.c.o.provides.build: CMakeFiles/f
 
 CMakeFiles/ft_ls.dir/libft/ft_lstadd_front_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstadd_front_bonus.c.o: ../libft/ft_lstadd_front_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstadd_front_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstadd_front_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstadd_front_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstadd_front_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstadd_front_bonus.c.i: cmake_force
@@ -539,7 +515,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstadd_front_bonus.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/ft_ls.dir/libft/ft_lstclear_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstclear_bonus.c.o: ../libft/ft_lstclear_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstclear_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstclear_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstclear_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstclear_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstclear_bonus.c.i: cmake_force
@@ -563,7 +539,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstclear_bonus.c.o.provides.build: CMakeFiles/ft_l
 
 CMakeFiles/ft_ls.dir/libft/ft_lstdelone_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstdelone_bonus.c.o: ../libft/ft_lstdelone_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstdelone_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstdelone_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstdelone_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstdelone_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstdelone_bonus.c.i: cmake_force
@@ -587,7 +563,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstdelone_bonus.c.o.provides.build: CMakeFiles/ft_
 
 CMakeFiles/ft_ls.dir/libft/ft_lstiter_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstiter_bonus.c.o: ../libft/ft_lstiter_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstiter_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstiter_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstiter_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstiter_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstiter_bonus.c.i: cmake_force
@@ -611,7 +587,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstiter_bonus.c.o.provides.build: CMakeFiles/ft_ls
 
 CMakeFiles/ft_ls.dir/libft/ft_lstlast_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstlast_bonus.c.o: ../libft/ft_lstlast_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstlast_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstlast_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstlast_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstlast_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstlast_bonus.c.i: cmake_force
@@ -635,7 +611,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstlast_bonus.c.o.provides.build: CMakeFiles/ft_ls
 
 CMakeFiles/ft_ls.dir/libft/ft_lstmap_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstmap_bonus.c.o: ../libft/ft_lstmap_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstmap_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstmap_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstmap_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstmap_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstmap_bonus.c.i: cmake_force
@@ -659,7 +635,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstmap_bonus.c.o.provides.build: CMakeFiles/ft_ls.
 
 CMakeFiles/ft_ls.dir/libft/ft_lstnew_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstnew_bonus.c.o: ../libft/ft_lstnew_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstnew_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstnew_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstnew_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstnew_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstnew_bonus.c.i: cmake_force
@@ -683,7 +659,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstnew_bonus.c.o.provides.build: CMakeFiles/ft_ls.
 
 CMakeFiles/ft_ls.dir/libft/ft_lstrev.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstrev.c.o: ../libft/ft_lstrev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstrev.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstrev.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstrev.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstrev.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstrev.c.i: cmake_force
@@ -707,7 +683,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstrev.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_lstsize_bonus.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_lstsize_bonus.c.o: ../libft/ft_lstsize_bonus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstsize_bonus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft_ls.dir/libft/ft_lstsize_bonus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_lstsize_bonus.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_lstsize_bonus.c
 
 CMakeFiles/ft_ls.dir/libft/ft_lstsize_bonus.c.i: cmake_force
@@ -731,7 +707,7 @@ CMakeFiles/ft_ls.dir/libft/ft_lstsize_bonus.c.o.provides.build: CMakeFiles/ft_ls
 
 CMakeFiles/ft_ls.dir/libft/ft_memccpy.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_memccpy.c.o: ../libft/ft_memccpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memccpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memccpy.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_memccpy.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memccpy.c
 
 CMakeFiles/ft_ls.dir/libft/ft_memccpy.c.i: cmake_force
@@ -755,7 +731,7 @@ CMakeFiles/ft_ls.dir/libft/ft_memccpy.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_memchr.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_memchr.c.o: ../libft/ft_memchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memchr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_memchr.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memchr.c
 
 CMakeFiles/ft_ls.dir/libft/ft_memchr.c.i: cmake_force
@@ -779,7 +755,7 @@ CMakeFiles/ft_ls.dir/libft/ft_memchr.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_memcmp.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_memcmp.c.o: ../libft/ft_memcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memcmp.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_memcmp.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memcmp.c
 
 CMakeFiles/ft_ls.dir/libft/ft_memcmp.c.i: cmake_force
@@ -803,7 +779,7 @@ CMakeFiles/ft_ls.dir/libft/ft_memcmp.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_memcpy.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_memcpy.c.o: ../libft/ft_memcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memcpy.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_memcpy.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memcpy.c
 
 CMakeFiles/ft_ls.dir/libft/ft_memcpy.c.i: cmake_force
@@ -827,7 +803,7 @@ CMakeFiles/ft_ls.dir/libft/ft_memcpy.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_memmove.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_memmove.c.o: ../libft/ft_memmove.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memmove.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memmove.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_memmove.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memmove.c
 
 CMakeFiles/ft_ls.dir/libft/ft_memmove.c.i: cmake_force
@@ -851,7 +827,7 @@ CMakeFiles/ft_ls.dir/libft/ft_memmove.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_memset.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_memset.c.o: ../libft/ft_memset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ft_ls.dir/libft/ft_memset.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_memset.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_memset.c
 
 CMakeFiles/ft_ls.dir/libft/ft_memset.c.i: cmake_force
@@ -875,7 +851,7 @@ CMakeFiles/ft_ls.dir/libft/ft_memset.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_putchar.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_putchar.c.o: ../libft/ft_putchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putchar.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putchar.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_putchar.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putchar.c
 
 CMakeFiles/ft_ls.dir/libft/ft_putchar.c.i: cmake_force
@@ -899,7 +875,7 @@ CMakeFiles/ft_ls.dir/libft/ft_putchar.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_putchar_fd.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_putchar_fd.c.o: ../libft/ft_putchar_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putchar_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putchar_fd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_putchar_fd.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putchar_fd.c
 
 CMakeFiles/ft_ls.dir/libft/ft_putchar_fd.c.i: cmake_force
@@ -923,7 +899,7 @@ CMakeFiles/ft_ls.dir/libft/ft_putchar_fd.c.o.provides.build: CMakeFiles/ft_ls.di
 
 CMakeFiles/ft_ls.dir/libft/ft_putendl_fd.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_putendl_fd.c.o: ../libft/ft_putendl_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putendl_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putendl_fd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_putendl_fd.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putendl_fd.c
 
 CMakeFiles/ft_ls.dir/libft/ft_putendl_fd.c.i: cmake_force
@@ -947,7 +923,7 @@ CMakeFiles/ft_ls.dir/libft/ft_putendl_fd.c.o.provides.build: CMakeFiles/ft_ls.di
 
 CMakeFiles/ft_ls.dir/libft/ft_putnbr.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_putnbr.c.o: ../libft/ft_putnbr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putnbr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putnbr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_putnbr.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putnbr.c
 
 CMakeFiles/ft_ls.dir/libft/ft_putnbr.c.i: cmake_force
@@ -971,7 +947,7 @@ CMakeFiles/ft_ls.dir/libft/ft_putnbr.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_putnbr_fd.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_putnbr_fd.c.o: ../libft/ft_putnbr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putnbr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putnbr_fd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_putnbr_fd.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putnbr_fd.c
 
 CMakeFiles/ft_ls.dir/libft/ft_putnbr_fd.c.i: cmake_force
@@ -995,7 +971,7 @@ CMakeFiles/ft_ls.dir/libft/ft_putnbr_fd.c.o.provides.build: CMakeFiles/ft_ls.dir
 
 CMakeFiles/ft_ls.dir/libft/ft_putstr.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_putstr.c.o: ../libft/ft_putstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putstr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_putstr.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putstr.c
 
 CMakeFiles/ft_ls.dir/libft/ft_putstr.c.i: cmake_force
@@ -1019,7 +995,7 @@ CMakeFiles/ft_ls.dir/libft/ft_putstr.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_putstr_fd.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_putstr_fd.c.o: ../libft/ft_putstr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putstr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/ft_ls.dir/libft/ft_putstr_fd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_putstr_fd.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_putstr_fd.c
 
 CMakeFiles/ft_ls.dir/libft/ft_putstr_fd.c.i: cmake_force
@@ -1043,7 +1019,7 @@ CMakeFiles/ft_ls.dir/libft/ft_putstr_fd.c.o.provides.build: CMakeFiles/ft_ls.dir
 
 CMakeFiles/ft_ls.dir/libft/ft_split.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_split.c.o: ../libft/ft_split.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/ft_ls.dir/libft/ft_split.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/ft_ls.dir/libft/ft_split.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_split.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_split.c
 
 CMakeFiles/ft_ls.dir/libft/ft_split.c.i: cmake_force
@@ -1067,7 +1043,7 @@ CMakeFiles/ft_ls.dir/libft/ft_split.c.o.provides.build: CMakeFiles/ft_ls.dir/lib
 
 CMakeFiles/ft_ls.dir/libft/ft_strchr.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strchr.c.o: ../libft/ft_strchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strchr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strchr.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strchr.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strchr.c.i: cmake_force
@@ -1091,7 +1067,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strchr.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_strcpy.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strcpy.c.o: ../libft/ft_strcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strcpy.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strcpy.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strcpy.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strcpy.c.i: cmake_force
@@ -1115,7 +1091,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strcpy.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_strdup.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strdup.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strdup.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strdup.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strdup.c.i: cmake_force
@@ -1139,7 +1115,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strdup.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_strjoin.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strjoin.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strjoin.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strjoin.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strjoin.c.i: cmake_force
@@ -1163,7 +1139,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strjoin.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strlcat.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strlcat.c.o: ../libft/ft_strlcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strlcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strlcat.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strlcat.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strlcat.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strlcat.c.i: cmake_force
@@ -1187,7 +1163,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strlcat.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strlcpy.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strlcpy.c.o: ../libft/ft_strlcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strlcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strlcpy.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strlcpy.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strlcpy.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strlcpy.c.i: cmake_force
@@ -1211,7 +1187,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strlcpy.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strlen.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strlen.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strlen.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strlen.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strlen.c.i: cmake_force
@@ -1235,7 +1211,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strlen.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_strmapi.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strmapi.c.o: ../libft/ft_strmapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strmapi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strmapi.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strmapi.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strmapi.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strmapi.c.i: cmake_force
@@ -1259,7 +1235,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strmapi.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strncat.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strncat.c.o: ../libft/ft_strncat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strncat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strncat.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strncat.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strncat.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strncat.c.i: cmake_force
@@ -1283,7 +1259,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strncat.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strncmp.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strncmp.c.o: ../libft/ft_strncmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strncmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strncmp.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strncmp.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strncmp.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strncmp.c.i: cmake_force
@@ -1307,7 +1283,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strncmp.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strnew.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strnew.c.o: ../libft/ft_strnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strnew.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strnew.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strnew.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strnew.c.i: cmake_force
@@ -1331,7 +1307,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strnew.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_strnstr.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strnstr.c.o: ../libft/ft_strnstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strnstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strnstr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strnstr.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strnstr.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strnstr.c.i: cmake_force
@@ -1355,7 +1331,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strnstr.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strrchr.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strrchr.c.o: ../libft/ft_strrchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strrchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strrchr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strrchr.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strrchr.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strrchr.c.i: cmake_force
@@ -1379,7 +1355,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strrchr.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_strtrim.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_strtrim.c.o: ../libft/ft_strtrim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strtrim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/ft_ls.dir/libft/ft_strtrim.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_strtrim.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_strtrim.c
 
 CMakeFiles/ft_ls.dir/libft/ft_strtrim.c.i: cmake_force
@@ -1403,7 +1379,7 @@ CMakeFiles/ft_ls.dir/libft/ft_strtrim.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_substr.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_substr.c.o: ../libft/ft_substr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/ft_ls.dir/libft/ft_substr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/ft_ls.dir/libft/ft_substr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_substr.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_substr.c
 
 CMakeFiles/ft_ls.dir/libft/ft_substr.c.i: cmake_force
@@ -1427,7 +1403,7 @@ CMakeFiles/ft_ls.dir/libft/ft_substr.c.o.provides.build: CMakeFiles/ft_ls.dir/li
 
 CMakeFiles/ft_ls.dir/libft/ft_tolower.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/ft_ls.dir/libft/ft_tolower.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/ft_ls.dir/libft/ft_tolower.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_tolower.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_tolower.c
 
 CMakeFiles/ft_ls.dir/libft/ft_tolower.c.i: cmake_force
@@ -1451,7 +1427,7 @@ CMakeFiles/ft_ls.dir/libft/ft_tolower.c.o.provides.build: CMakeFiles/ft_ls.dir/l
 
 CMakeFiles/ft_ls.dir/libft/ft_toupper.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/ft_ls.dir/libft/ft_toupper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/ft_ls.dir/libft/ft_toupper.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/libft/ft_toupper.c.o   -c /mnt/c/Users/Forward/Desktop/42/ft_ls/libft/ft_toupper.c
 
 CMakeFiles/ft_ls.dir/libft/ft_toupper.c.i: cmake_force
@@ -1482,7 +1458,6 @@ ft_ls_OBJECTS = \
 "CMakeFiles/ft_ls.dir/srcs/main.c.o" \
 "CMakeFiles/ft_ls.dir/srcs/output.c.o" \
 "CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o" \
-"CMakeFiles/ft_ls.dir/srcs/recursive.c.o" \
 "CMakeFiles/ft_ls.dir/srcs/utils.c.o" \
 "CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o" \
 "CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o" \
@@ -1545,7 +1520,6 @@ ft_ls: CMakeFiles/ft_ls.dir/srcs/free.c.o
 ft_ls: CMakeFiles/ft_ls.dir/srcs/main.c.o
 ft_ls: CMakeFiles/ft_ls.dir/srcs/output.c.o
 ft_ls: CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o
-ft_ls: CMakeFiles/ft_ls.dir/srcs/recursive.c.o
 ft_ls: CMakeFiles/ft_ls.dir/srcs/utils.c.o
 ft_ls: CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o
 ft_ls: CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o
@@ -1599,7 +1573,7 @@ ft_ls: CMakeFiles/ft_ls.dir/libft/ft_tolower.c.o
 ft_ls: CMakeFiles/ft_ls.dir/libft/ft_toupper.c.o
 ft_ls: CMakeFiles/ft_ls.dir/build.make
 ft_ls: CMakeFiles/ft_ls.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Linking C executable ft_ls"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking C executable ft_ls"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_ls.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1614,7 +1588,6 @@ CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/srcs/free.c.o.requires
 CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/srcs/main.c.o.requires
 CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/srcs/output.c.o.requires
 CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o.requires
-CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/srcs/recursive.c.o.requires
 CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/srcs/utils.c.o.requires
 CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o.requires
 CMakeFiles/ft_ls.dir/requires: CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o.requires

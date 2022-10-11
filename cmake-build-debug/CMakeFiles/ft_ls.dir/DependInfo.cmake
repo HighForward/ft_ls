@@ -61,7 +61,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/main.c" "/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/srcs/main.c.o"
   "/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/output.c" "/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/srcs/output.c.o"
   "/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/parse_dir.c" "/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o"
-  "/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/recursive.c" "/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/srcs/recursive.c.o"
   "/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/utils.c" "/mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/srcs/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

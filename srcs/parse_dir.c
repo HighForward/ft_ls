@@ -1,7 +1,7 @@
 #include "../includes/ft_ls.h"
 
 int dir_is_not_dot(char *dir) {
-    if (ft_strncmp(dir, ".", ft_strlen(dir)) == 0 || ft_strncmp(dir, "..", ft_strlen(dir)) == 0)
+    if (ft_strcmp(dir, ".") == 0 || ft_strcmp(dir, "..") == 0)
         return (1);
     return (0);
 }
@@ -42,17 +42,34 @@ void load_listing(ls_content *content, char *path) {
 
         char *dir_path = get_dir_path(path, content->name);
 
-        if (stat(dir_path, &sb) < 0) {
-            str_error("error stat");
+        if (content->type == DT_LNK) {
+
+            if (lstat(dir_path, &sb) < 0) {
+                str_error("error stat");
+            }
+            ssize_t len = readlink(dir_path, content->sym_link, sizeof(content->sym_link) - 1);
+            if (len != -1) {
+                content->sym_link[len] = '\0';
+            }
+
+        } else {
+            if (stat(dir_path, &sb) < 0) {
+                str_error("error stat");
+            }
         }
+
 
         free(dir_path);
 
-        content->nb_link = 1;
+        content->nb_link = sb.st_nlink;
         content->u_name = getpwuid(sb.st_uid)->pw_name;
         content->g_name = getgrgid(sb.st_gid)->gr_name;
         content->octets = sb.st_size;
-        get_ls_time_format(content, sb.st_ctime);
+        content->blksize = sb.st_blocks;
+        content->perm = sb.st_mode;
+        content->last_update = sb.st_mtime;
+        //todo: update this for only display and not allocate it
+        get_ls_time_format(content, sb.st_mtime);
     }
 }
 
@@ -71,21 +88,30 @@ ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
         if (!(content = load_dir_data(dirp)))
             return (NULL);
 
-        if (options->long_list) {
-            load_listing(content, path);
-        }
+        load_listing(content, path);
 
         ls_node *tmp_new = ls_lstnew(content);
 
 
-        lst_add_node_sort(&nodes, tmp_new);
+        lst_add_node_sort(&nodes, tmp_new, options);
     }
 
-//    free(dp);
     return nodes;
 }
 
-void lst_add_node_sort(ls_node **alst, ls_node *new)
+int trigger_insert(ls_content *curr, ls_content *next, ls_options *options) {
+
+    if (options->sort_by_updated_time) {
+        return (!options->rev ?
+            curr->last_update <= next->last_update : curr->last_update >= next->last_update);
+    } else {
+        return (!options->rev ?
+            ft_strcmp(curr->name, next->name) >= 0 : ft_strcmp(curr->name, next->name) <= 0);
+    }
+}
+
+
+void lst_add_node_sort(ls_node **alst, ls_node *new, ls_options *options)
 {
     ls_node *curr = NULL;
 
@@ -98,7 +124,7 @@ void lst_add_node_sort(ls_node **alst, ls_node *new)
             curr = (*alst);
             do
             {
-                if (ft_strncmp(curr->content->name, new->content->name, ft_strlen(new->content->name)) > 0)
+                if (trigger_insert(curr->content, new->content, options))
                 {
                     ls_node *tmp = curr->next;
                     curr->next = new;

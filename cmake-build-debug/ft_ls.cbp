@@ -249,9 +249,6 @@
 		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/parse_dir.c">
 			<Option target="ft_ls"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/recursive.c">
-			<Option target="ft_ls"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/utils.c">
 			<Option target="ft_ls"/>
 		</Unit>

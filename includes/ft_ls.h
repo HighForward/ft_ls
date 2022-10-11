@@ -23,7 +23,11 @@ typedef struct ls_content
     char *u_name;
     char *g_name;
     long long octets;
+    __blksize_t blksize;
+    __mode_t perm;
+    __time_t last_update;
     char time[LS_TIME_SIZE];
+    char sym_link[PATH_MAX];
 
 } ls_content;
 
@@ -53,7 +57,7 @@ void str_error(char *error);
 int dir_is_not_dot(char *dir);
 char *get_dir_path(char *curr_path, char *curr_dir);
 ls_node *process_dir(DIR *dp, char *path, ls_options *options);
-void lst_add_node_sort(ls_node **alst, ls_node *new);
+void lst_add_node_sort(ls_node **alst, ls_node *new, ls_options *options);
 
 
 /** ARGS **/
@@ -78,8 +82,8 @@ void free_split(char **split);
 /** LST UTILS **/
 ls_node	*ls_lstnew(void *content);
 
-
 /** UTILS **/
 char *ft_strcat(char *dst, char *to_cat);
+int	ft_strcmp(char *s1, char *s2);
 
 #endif

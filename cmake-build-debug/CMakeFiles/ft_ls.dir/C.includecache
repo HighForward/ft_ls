@@ -23,6 +23,8 @@ time.h
 -
 grp.h
 -
+pwd.h
+-
 
 /mnt/c/Users/Forward/Desktop/42/ft_ls/includes/libft.h
 unistd.h
@@ -253,10 +255,6 @@ stdlib.h
 /mnt/c/Users/Forward/Desktop/42/ft_ls/includes/ft_ls.h
 
 /mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/parse_dir.c
-../includes/ft_ls.h
-/mnt/c/Users/Forward/Desktop/42/ft_ls/includes/ft_ls.h
-
-/mnt/c/Users/Forward/Desktop/42/ft_ls/srcs/recursive.c
 ../includes/ft_ls.h
 /mnt/c/Users/Forward/Desktop/42/ft_ls/includes/ft_ls.h
 

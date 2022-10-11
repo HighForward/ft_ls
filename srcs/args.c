@@ -22,17 +22,17 @@ int parse_args(int argc, char **argv, ls_options *options)
     {
         arg = argv[i];
 
-        if (ft_strncmp(arg, "--help", ft_strlen(arg)) == 0)
+        if (ft_strcmp(arg, "--help") == 0)
             perform_h();
-        else if (ft_strncmp(arg, "-a", ft_strlen(arg)) == 0)
+        else if (ft_strcmp(arg, "-a") == 0)
             options->all = 1;
-        else if (ft_strncmp(arg, "-l", ft_strlen(arg)) == 0)
+        else if (ft_strcmp(arg, "-l") == 0)
             options->long_list = 1;
-        else if (ft_strncmp(arg, "-R", ft_strlen(arg)) == 0)
+        else if (ft_strcmp(arg, "-R") == 0)
             options->recursive = 1;
-        else if (ft_strncmp(arg, "-r", ft_strlen(arg)) == 0)
+        else if (ft_strcmp(arg, "-r") == 0)
             options->rev = 1;
-        else if (ft_strncmp(arg, "-t", ft_strlen(arg)) == 0)
+        else if (ft_strcmp(arg, "-t") == 0)
             options->sort_by_updated_time = 1;
         else if (!options->base_path)
             options->base_path = argv[i];

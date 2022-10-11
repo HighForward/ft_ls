@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_ls.dir/srcs/main.c.o"
   "CMakeFiles/ft_ls.dir/srcs/output.c.o"
   "CMakeFiles/ft_ls.dir/srcs/parse_dir.c.o"
-  "CMakeFiles/ft_ls.dir/srcs/recursive.c.o"
   "CMakeFiles/ft_ls.dir/srcs/utils.c.o"
   "CMakeFiles/ft_ls.dir/libft/ft_atoi.c.o"
   "CMakeFiles/ft_ls.dir/libft/ft_bzero.c.o"

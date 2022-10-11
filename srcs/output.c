@@ -2,11 +2,16 @@
 
 void print_simple(ls_node *nodes) {
     ls_node *it = nodes;
+
     while (it) {
         ft_putstr(it->content->name);
         it = it->next;
         if (it != NULL)
             ft_putstr("  ");
+    }
+
+    if (nodes) {
+        putchar('\n');
     }
 }
 
@@ -22,10 +27,4 @@ void print_ls(ls_node *dir_nodes, char *path, ls_options *options) {
     else
         print_simple(dir_nodes);
 
-
-    if (!options->long_list)
-        putchar('\n');
-
-    if (options->recursive)
-        putchar('\n');
 }
