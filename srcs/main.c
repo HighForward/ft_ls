@@ -35,9 +35,9 @@ int process_ls(char *path, ls_options *options) {
             }
             iterator = iterator->next;
         }
-        free_nodes(dir_nodes);
-        free(dp);
     }
+    free_nodes(dir_nodes);
+    closedir(dp);
 
     return (EXIT_SUCCESS);
 }

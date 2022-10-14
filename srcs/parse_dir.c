@@ -34,7 +34,7 @@ ls_content *load_dir_data(struct dirent *dir) {
     return (content);
 }
 
-void load_listing(ls_content *content, char *path) {
+int load_listing(ls_content *content, char *path) {
 
     if (content) {
         struct stat sb;
@@ -45,7 +45,9 @@ void load_listing(ls_content *content, char *path) {
         if (content->type == DT_LNK) {
 
             if (lstat(dir_path, &sb) < 0) {
-                str_error("error stat");
+                printf("ls: cannot access '%s': Permission denied\n", dir_path);
+                free(dir_path);
+                return (EXIT_FAILURE);
             }
             ssize_t len = readlink(dir_path, content->sym_link, sizeof(content->sym_link) - 1);
             if (len != -1) {
@@ -54,7 +56,9 @@ void load_listing(ls_content *content, char *path) {
 
         } else {
             if (stat(dir_path, &sb) < 0) {
-                str_error("error stat");
+                printf("ls: cannot access '%s': Permission denied\n", dir_path);
+                free(dir_path);
+                return (EXIT_FAILURE);
             }
         }
 
@@ -69,6 +73,7 @@ void load_listing(ls_content *content, char *path) {
         content->perm = sb.st_mode;
         content->last_update = sb.st_mtime;
     }
+    return (EXIT_SUCCESS);
 }
 
 ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
@@ -86,7 +91,10 @@ ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
         if (!(content = load_dir_data(dirp)))
             return (NULL);
 
-        load_listing(content, path);
+        if (load_listing(content, path)) {
+            free(content);
+            continue;
+        }
 
         ls_node *tmp_new = ls_lstnew(content);
 
