@@ -6,6 +6,7 @@
 #include <errno.h>
 #include <sys/types.h>
 #include <dirent.h>
+#include <string.h>
 
 #include <sys/stat.h>
 #include <time.h>
@@ -26,7 +27,6 @@ typedef struct ls_content
     __blksize_t blksize;
     __mode_t perm;
     __time_t last_update;
-    char time[LS_TIME_SIZE];
     char sym_link[PATH_MAX];
 
 } ls_content;

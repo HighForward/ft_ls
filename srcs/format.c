@@ -1,20 +1,5 @@
 #include "../includes/ft_ls.h"
 
-void get_ls_time_format(ls_content *content, time_t time) {
-    char *str_time = NULL;
-
-    str_time = ctime(&time);
-    char **split_date = ft_split(str_time, ' ');
-
-    ft_strcat(content->time, split_date[1]);
-    ft_strcat(content->time, ft_strlen(split_date[2]) == 1 ? "  " : " ");
-    ft_strcat(content->time, split_date[2]);
-    ft_strcat(content->time, " ");
-    ft_strncat(content->time, split_date[3], 5);
-
-    free_split(split_date);
-}
-
 void print_ls_perm_format(ls_content *content) {
 
     if (content->type == DT_DIR) { putchar('d'); }
@@ -37,13 +22,29 @@ void print_ls_perm_format(ls_content *content) {
 
 }
 
+void print_ls_time_format(ls_content *content, int time_padding) {
+    char *str_time = NULL;
+
+    str_time = ctime(&content->last_update);
+
+    printf("%.6s ", str_time + 4);
+
+    if (ft_strcmp(str_time + (ft_strlen(str_time) - 5), "2022\n") != 0) {
+        printf("%*.4s ", time_padding, str_time + (ft_strlen(str_time) - 5));
+    } else {
+        printf("%*.5s ", time_padding, str_time + (ft_strlen(str_time) - 14));
+    }
+
+}
+
+
 //http://manpagesfr.free.fr/man/man2/stat.2.html <- stat example
 //https://www.mkssoftware.com/docs/man1/ls.1.asp <- long listing infos
 
 int get_number_len(int nb) {
 
     int i = 1;
-    while (nb > 10) {
+    while (nb >= 10) {
         nb = nb / 10;
         i++;
     }
@@ -64,6 +65,8 @@ struct ls_padding handle_listing_padding(struct ls_node *dir_nodes) {
     struct ls_padding paddings;
     ft_bzero(&paddings, sizeof(struct ls_padding));
 
+    char *str_time = NULL;
+
     while (it) {
 
         int tmp_link_size = get_number_len(it->content->nb_link);
@@ -80,8 +83,11 @@ struct ls_padding handle_listing_padding(struct ls_node *dir_nodes) {
         if (paddings.octet_size < tmp_octets_size)
             paddings.octet_size = tmp_octets_size;
 
-        if (paddings.time_size < ft_strlen(it->content->time))
-            paddings.time_size = ft_strlen(it->content->time);
+        str_time = ctime(&it->content->last_update);
+
+        if (ft_strnstr(str_time, "2022", ft_strlen(str_time)) == NULL)
+            paddings.time_size = 5;
+
 
         it = it->next;
     }
@@ -100,13 +106,16 @@ void print_listing(ls_node *nodes) {
     while (it)
     {
         print_ls_perm_format(it->content);
-        printf(" %*d %*s %*s %*lld %*s %s",
+
+        printf(" %*d %*s %*s %*lld ",
                paddings.link_size, it->content->nb_link,
                paddings.u_name_size, it->content->u_name,
                paddings.g_name_size, it->content->g_name,
-               paddings.octet_size, it->content->octets,
-               paddings.time_size, it->content->time,
-               it->content->name);
+               paddings.octet_size, it->content->octets);
+
+        print_ls_time_format(it->content, paddings.time_size);
+
+        printf("%s", it->content->name);
 
         if (ft_strlen(it->content->sym_link) > 0) {
             printf(" -> %s", it->content->sym_link);

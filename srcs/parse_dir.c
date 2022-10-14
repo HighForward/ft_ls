@@ -68,8 +68,6 @@ void load_listing(ls_content *content, char *path) {
         content->blksize = sb.st_blocks;
         content->perm = sb.st_mode;
         content->last_update = sb.st_mtime;
-        //todo: update this for only display and not allocate it
-        get_ls_time_format(content, sb.st_mtime);
     }
 }
 

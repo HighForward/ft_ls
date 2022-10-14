@@ -5,8 +5,10 @@ int process_ls(char *path, ls_options *options) {
     DIR *dp = opendir(path);
 
     //todo: handle errors
-    if (dp == NULL)
-        str_error("unhandled dir errors\n");
+    if (dp == NULL) {
+        printf("ft_ls: cannot open directory '%s': Permission denied\n", path);
+        return (EXIT_SUCCESS);
+    }
 
     ls_node *dir_nodes = process_dir(dp, path, options);
 
