@@ -56,6 +56,36 @@ int handle_group_args(char *args, ls_options *options) {
 
 }
 
+int getDoubleArrayLen(char **arr) {
+
+    int i = 0;
+
+    if (!arr)
+        return (0);
+
+    while (arr[i]) {
+        i++;
+    }
+    return (i);
+}
+
+void push_new_arg(ls_options *options, char *arg) {
+
+    int i = 0;
+    int curr_arr_len = getDoubleArrayLen(options->paths);
+
+    char **tmp = (char**) malloc(sizeof (char*) * (curr_arr_len + 2));
+    while (i < curr_arr_len) {
+        tmp[i] = options->paths[i];
+        i++;
+    }
+    tmp[i++] = arg;
+    tmp[i] = NULL;
+
+    free(options->paths);
+    options->paths = tmp;
+}
+
 int parse_args(int argc, char **argv, ls_options *options)
 {
     int i = 0;
@@ -84,13 +114,10 @@ int parse_args(int argc, char **argv, ls_options *options)
             options->sort_file_size = 1;
         else if (arg[0] == '-')
             handle_group_args(arg, options);
-        else if (!options->base_path)
-            options->base_path = argv[i];
+        else
+            push_new_arg(options, arg);
         i++;
     }
-
-    if (options->base_path == NULL)
-        options->base_path = ".";
 
     return (EXIT_SUCCESS);
 }

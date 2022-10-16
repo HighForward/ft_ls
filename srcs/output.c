@@ -25,7 +25,7 @@ void print_simple(ls_node *nodes, ls_options *options) {
 
 void print_ls(ls_node *dir_nodes, char *path, ls_options *options) {
 
-    if (options->recursive) {
+    if (options->recursive || getDoubleArrayLen(options->paths) > 1) {
         printf("%s:\n", path);
     }
 

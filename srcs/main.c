@@ -18,7 +18,7 @@ int process_ls(char *path, ls_options *options) {
         lst_add_node_sort(&dir_nodes, tmp_new, options);
 
     } else {
-        if (options->recursive && ft_strcmp(path, options->base_path) != 0) {
+        if ((options->recursive || getDoubleArrayLen(options->paths) > 1) && ft_strcmp(path, options->base_path) != 0) {
             ft_putstr("\n");
         }
         dir_nodes = process_dir(dp, path, options);
@@ -63,8 +63,24 @@ int main(int argc, char **argv)
     if (parse_args(argc, argv + 1, &options))
         return (EXIT_FAILURE);
 
-    if (process_ls(options.base_path, &options))
-        return (EXIT_FAILURE);
+    int i = getDoubleArrayLen(options.paths);
+    if (i == 0) {
+        options.base_path = ".";
+        if (process_ls(".", &options))
+            return (EXIT_FAILURE);
+    } else {
+        while (i - 1 >= 0 && options.paths && options.paths[i - 1] != NULL) {
+
+            options.base_path = options.paths[i - 1];
+            if (process_ls(options.paths[i - 1], &options))
+                return (EXIT_FAILURE);
+            i--;
+            if (i > 0)
+                printf("\n");
+        }
+
+    }
+
 
     return (1);
 }

@@ -50,7 +50,7 @@ typedef struct ls_options
     int not_print_group;
     int sort_file_size;
     char *base_path;
-    char **path;
+    char **paths;
 } ls_options;
 
 
@@ -92,7 +92,7 @@ ls_node	*ls_lstnew(void *content);
 char *ft_strcat(char *dst, char *to_cat);
 int	ft_strcmp(char *s1, char *s2);
 int	ft_strcmp_lower(char *s1, char *s2);
-
+int getDoubleArrayLen(char **arr);
 
 /** COLORS **/
 void yellow();
