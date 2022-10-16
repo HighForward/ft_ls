@@ -9,11 +9,19 @@ int dir_is_not_dot(char *dir) {
 char *get_dir_path(char *curr_path, char *curr_dir) {
 
     char *tmp_str = NULL;
-    const int tmp_len = (int)ft_strlen(curr_path) + (int)ft_strlen(curr_dir) + 1; //+1 for the slash
+
+    size_t base_len = ft_strlen(curr_path);
+    size_t dir_len = ft_strlen(curr_dir);
+    size_t slash = 0;
+    if (curr_path[base_len - 1] != '/')
+        slash = 1;
+
+    const size_t tmp_len = base_len + dir_len + slash; //+1 for the slash
 
     tmp_str = ft_strnew(tmp_len);
     tmp_str = ft_strcat(tmp_str, curr_path);
-    tmp_str = ft_strcat(tmp_str, "/");
+    if (slash)
+        tmp_str = ft_strcat(tmp_str, "/");
     tmp_str = ft_strcat(tmp_str, curr_dir);
     return (tmp_str);
 }
@@ -28,7 +36,7 @@ ls_content *load_dir_data(struct dirent *dir) {
     }
 
     ft_bzero(content, sizeof(struct ls_content));
-    content->name = dir->d_name;
+    content->name = ft_strdup(dir->d_name);
     content->type = dir->d_type;
     content->g_name = NULL;
     content->u_name = NULL;
@@ -69,13 +77,22 @@ int load_listing(ls_content *content, char *path) {
 
         struct passwd* puid = getpwuid(sb.st_uid);
         struct group* guid = getgrgid(sb.st_gid);
-        struct group* group = getgrgid(guid->gr_gid);
+        struct group* group = NULL;
+
+        if (puid) {
+            content->u_name = puid->pw_name;
+        }
+
+        if (guid && guid->gr_gid) {
+            group = getgrgid(guid->gr_gid);
+            content->g_name = ft_strdup(group->gr_name);
+        } else if (guid) {
+            content->g_name = ft_strdup(guid->gr_name);
+        }
+
+
 
         content->nb_link = sb.st_nlink;
-        content->u_name = puid->pw_name;
-
-
-        content->g_name = ft_strdup(guid->gr_name);
 
         content->octets = sb.st_size;
         content->blksize = sb.st_blksize;
@@ -95,6 +112,8 @@ ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
 
     while ((dirp = readdir(dp)) != NULL)
     {
+//        printf("NAME: %s\n", dirp->d_name);
+
         if (!options->all && ft_strlen(dirp->d_name) && dirp->d_name[0] == '.')
             continue;
 
@@ -102,6 +121,7 @@ ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
             return (NULL);
 
         if (load_listing(content, path)) {
+            free(content->name);
             free(content);
             continue;
         }

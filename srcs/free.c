@@ -16,6 +16,8 @@ void free_nodes(ls_node *nodes)
                 after = NULL;
             if (now->content->g_name)
                 free(now->content->g_name);
+            if (now->content->name)
+                free(now->content->name);
             free(now->content);
             free(now);
             now = after;

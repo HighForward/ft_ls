@@ -22,7 +22,7 @@ RM			=	rm -f
 
 ${OBJS_DIR}/%.o: %.c
 				@mkdir -p ${@D}
-				@${CC} ${CFLAGS} -c $< -o $@
+				${CC} ${CFLAGS} -c $< -o $@
 
 all: ${NAME}
 

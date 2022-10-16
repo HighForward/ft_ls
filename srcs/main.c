@@ -8,6 +8,10 @@ int process_ls(char *path, ls_options *options) {
     if (dp == NULL) {
         printf("ft_ls: cannot open directory '%s': Permission denied\n", path);
         return (EXIT_SUCCESS);
+    } else {
+        if (options->recursive && ft_strcmp(path, options->base_path) != 0) {
+            ft_putstr("\n");
+        }
     }
 
     ls_node *dir_nodes = process_dir(dp, path, options);
@@ -24,9 +28,9 @@ int process_ls(char *path, ls_options *options) {
 
                 char *tmp_str = get_dir_path(path, iterator->content->name);
 
-                if (options->recursive) {
-                    ft_putstr("\n");
-                }
+//                if (options->recursive) {
+//                    ft_putstr("\n");
+//                }
 
                 if (process_ls(tmp_str, options))
                     return (EXIT_SUCCESS);
