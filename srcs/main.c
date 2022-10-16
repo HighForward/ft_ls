@@ -1,24 +1,28 @@
 #include "../includes/ft_ls.h"
 
+//1427295
+
 int process_ls(char *path, ls_options *options) {
 
     DIR *dp = opendir(path);
     ls_node *dir_nodes = NULL;
-    //todo: handle errors
-    if (dp == NULL) {
-        ls_content *content = load_dir_data();
 
-        if (load_listing(content, path)) {
-            free(content);
+    if (dp == NULL) {
+
+
+        //todo: handle errno here
+
+        if (errno == EACCES || errno == EBADF || errno == EMFILE || errno == ENOENT || errno == ENOMEM || errno == ENOTDIR) {
+            fprintf(stderr, "ls: cannot open directory '%s': %s\n", path, strerror(errno));
             return (EXIT_SUCCESS);
         }
+
+        ls_content *content = alloc_content_struct();
+        load_data_and_insert_node(&dir_nodes, content, path, options);
         content->name = ft_strdup(path);
 
-        ls_node *tmp_new = ls_lstnew(content);
-        lst_add_node_sort(&dir_nodes, tmp_new, options);
-
     } else {
-        if ((options->recursive || getDoubleArrayLen(options->paths) > 1) && ft_strcmp(path, options->base_path) != 0) {
+        if (has_next_item(options) && ft_strcmp(path, options->base_path) != 0) {
             ft_putstr("\n");
         }
         dir_nodes = process_dir(dp, path, options);
@@ -63,24 +67,26 @@ int main(int argc, char **argv)
     if (parse_args(argc, argv + 1, &options))
         return (EXIT_FAILURE);
 
-    int i = getDoubleArrayLen(options.paths);
-    if (i == 0) {
-        options.base_path = ".";
-        if (process_ls(".", &options))
-            return (EXIT_FAILURE);
-    } else {
-        while (i - 1 >= 0 && options.paths && options.paths[i - 1] != NULL) {
-
-            options.base_path = options.paths[i - 1];
-            if (process_ls(options.paths[i - 1], &options))
-                return (EXIT_FAILURE);
-            i--;
-            if (i > 0)
-                printf("\n");
+    int i = double_array_len(options.paths);
+    int curr_index = i;
+    options.base_path = ".";
+    do
+    {
+        if (i > 0) {
+            options.base_path = options.paths[curr_index - 1];
         }
 
-    }
+        if (process_ls(options.base_path, &options))
+            return (EXIT_FAILURE);
 
+        curr_index--;
+
+        if (curr_index > 0)
+            printf("\n");
+
+    } while (curr_index > 0);
+
+    free(options.paths);
 
     return (1);
 }

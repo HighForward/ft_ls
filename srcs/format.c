@@ -71,11 +71,6 @@ struct ls_padding handle_listing_padding(struct ls_node *dir_nodes, ls_options *
 
     while (it) {
 
-        if (!options->all && ft_strlen(it->content->name) && it->content->name[0] == '.') {
-            it = it->next;
-            continue;
-        }
-
         int tmp_link_size = get_number_len(it->content->nb_link);
         if (paddings.link_size < tmp_link_size)
             paddings.link_size = tmp_link_size;

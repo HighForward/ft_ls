@@ -56,7 +56,7 @@ int handle_group_args(char *args, ls_options *options) {
 
 }
 
-int getDoubleArrayLen(char **arr) {
+int double_array_len(char **arr) {
 
     int i = 0;
 
@@ -72,7 +72,7 @@ int getDoubleArrayLen(char **arr) {
 void push_new_arg(ls_options *options, char *arg) {
 
     int i = 0;
-    int curr_arr_len = getDoubleArrayLen(options->paths);
+    int curr_arr_len = double_array_len(options->paths);
 
     char **tmp = (char**) malloc(sizeof (char*) * (curr_arr_len + 2));
     while (i < curr_arr_len) {

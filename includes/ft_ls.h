@@ -11,6 +11,9 @@
 #include <sys/stat.h>
 #include <time.h>
 
+#include <sys/sysmacros.h>
+
+
 #include <grp.h>
 #include <pwd.h>
 
@@ -28,6 +31,9 @@ typedef struct ls_content
     __blkcnt_t blocks;
     __mode_t perm;
     __time_t last_update;
+
+    unsigned int major;
+    unsigned int minor;
     char sym_link[PATH_MAX];
 
 } ls_content;
@@ -64,7 +70,8 @@ char *get_dir_path(char *curr_path, char *curr_dir);
 ls_node *process_dir(DIR *dp, char *path, ls_options *options);
 void lst_add_node_sort(ls_node **alst, ls_node *new, ls_options *options);
 int load_listing(ls_content *content, char *path);
-ls_content *load_dir_data();
+ls_content *alloc_content_struct();
+int load_data_and_insert_node(ls_node **nodes, ls_content *content, char* path, ls_options *options);
 
 /** ARGS **/
 int parse_args(int argc, char **argv, ls_options *options);
@@ -73,6 +80,7 @@ int parse_args(int argc, char **argv, ls_options *options);
 /** OUTPUT **/
 void print_ls(ls_node *dir_nodes, char *path, ls_options *options);
 void print_listing(ls_node *nodes, ls_options *options);
+int has_next_item(ls_options *options);
 
 /** FORMAT **/
 void get_ls_time_format(ls_content *content, time_t time);
@@ -92,7 +100,7 @@ ls_node	*ls_lstnew(void *content);
 char *ft_strcat(char *dst, char *to_cat);
 int	ft_strcmp(char *s1, char *s2);
 int	ft_strcmp_lower(char *s1, char *s2);
-int getDoubleArrayLen(char **arr);
+int double_array_len(char **arr);
 
 /** COLORS **/
 void yellow();
