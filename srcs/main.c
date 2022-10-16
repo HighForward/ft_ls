@@ -3,18 +3,27 @@
 int process_ls(char *path, ls_options *options) {
 
     DIR *dp = opendir(path);
-
+    ls_node *dir_nodes = NULL;
     //todo: handle errors
     if (dp == NULL) {
-        printf("ft_ls: cannot open directory '%s': Permission denied\n", path);
-        return (EXIT_SUCCESS);
+        ls_content *content = load_dir_data();
+
+        if (load_listing(content, path)) {
+            free(content);
+            return (EXIT_SUCCESS);
+        }
+        content->name = ft_strdup(path);
+
+        ls_node *tmp_new = ls_lstnew(content);
+        lst_add_node_sort(&dir_nodes, tmp_new, options);
+
     } else {
         if (options->recursive && ft_strcmp(path, options->base_path) != 0) {
             ft_putstr("\n");
         }
+        dir_nodes = process_dir(dp, path, options);
     }
 
-    ls_node *dir_nodes = process_dir(dp, path, options);
 
     print_ls(dir_nodes, path, options);
 
@@ -28,10 +37,6 @@ int process_ls(char *path, ls_options *options) {
 
                 char *tmp_str = get_dir_path(path, iterator->content->name);
 
-//                if (options->recursive) {
-//                    ft_putstr("\n");
-//                }
-
                 if (process_ls(tmp_str, options))
                     return (EXIT_SUCCESS);
 
@@ -40,8 +45,12 @@ int process_ls(char *path, ls_options *options) {
             iterator = iterator->next;
         }
     }
+
+
     free_nodes(dir_nodes);
-    closedir(dp);
+
+    if (dp != NULL)
+        closedir(dp);
 
     return (EXIT_SUCCESS);
 }

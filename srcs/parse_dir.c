@@ -13,7 +13,7 @@ char *get_dir_path(char *curr_path, char *curr_dir) {
     size_t base_len = ft_strlen(curr_path);
     size_t dir_len = ft_strlen(curr_dir);
     size_t slash = 0;
-    if (curr_path[base_len - 1] != '/')
+    if (curr_path[base_len - 1] != '/' && dir_len > 0)
         slash = 1;
 
     const size_t tmp_len = base_len + dir_len + slash; //+1 for the slash
@@ -22,12 +22,13 @@ char *get_dir_path(char *curr_path, char *curr_dir) {
     tmp_str = ft_strcat(tmp_str, curr_path);
     if (slash)
         tmp_str = ft_strcat(tmp_str, "/");
-    tmp_str = ft_strcat(tmp_str, curr_dir);
+    if (dir_len)
+        tmp_str = ft_strcat(tmp_str, curr_dir);
     return (tmp_str);
 }
 
 
-ls_content *load_dir_data(struct dirent *dir) {
+ls_content *load_dir_data() {
 
     ls_content *content = NULL;
 
@@ -36,8 +37,8 @@ ls_content *load_dir_data(struct dirent *dir) {
     }
 
     ft_bzero(content, sizeof(struct ls_content));
-    content->name = ft_strdup(dir->d_name);
-    content->type = dir->d_type;
+    content->name = NULL;
+    content->type = 0;
     content->g_name = NULL;
     content->u_name = NULL;
 
@@ -55,7 +56,7 @@ int load_listing(ls_content *content, char *path) {
         if (content->type == DT_LNK) {
 
             if (lstat(dir_path, &sb) < 0) {
-                printf("ls: cannot access '%s': Permission denied\n", dir_path);
+                printf("ls: cannot access '%s': %s\n", dir_path, strerror(errno));
                 free(dir_path);
                 return (EXIT_FAILURE);
             }
@@ -66,18 +67,18 @@ int load_listing(ls_content *content, char *path) {
 
         } else {
             if (stat(dir_path, &sb) < 0) {
-                printf("ls: cannot access '%s': Permission denied\n", dir_path);
+                printf("ls: cannot access '%s': %s\n", dir_path, strerror(errno));
                 free(dir_path);
                 return (EXIT_FAILURE);
             }
         }
-
 
         free(dir_path);
 
         struct passwd* puid = getpwuid(sb.st_uid);
         struct group* guid = getgrgid(sb.st_gid);
         struct group* group = NULL;
+
 
         if (puid) {
             content->u_name = puid->pw_name;
@@ -90,10 +91,7 @@ int load_listing(ls_content *content, char *path) {
             content->g_name = ft_strdup(guid->gr_name);
         }
 
-
-
         content->nb_link = sb.st_nlink;
-
         content->octets = sb.st_size;
         content->blksize = sb.st_blksize;
         content->blocks = sb.st_blocks / 2;
@@ -112,13 +110,16 @@ ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
 
     while ((dirp = readdir(dp)) != NULL)
     {
-//        printf("NAME: %s\n", dirp->d_name);
+//        if (ft_strlen(dirp->d_name) && dirp->d_name[0] == '.')
+//            continue;
 
-        if (!options->all && ft_strlen(dirp->d_name) && dirp->d_name[0] == '.')
-            continue;
-
-        if (!(content = load_dir_data(dirp)))
+        if (!(content = load_dir_data()))
             return (NULL);
+
+        content->name = ft_strdup(dirp->d_name);
+        content->type = dirp->d_type;
+
+
 
         if (load_listing(content, path)) {
             free(content->name);
@@ -140,6 +141,10 @@ int trigger_insert(ls_content *curr, ls_content *next, ls_options *options) {
     if (options->sort_by_updated_time) {
         return (!options->rev ?
             curr->last_update <= next->last_update : curr->last_update >= next->last_update);
+    }
+    if (options->sort_file_size) {
+        return (!options->rev ?
+                curr->octets <= next->octets : curr->octets >= next->octets);
     } else {
         return (!options->rev ?
             ft_strcmp_lower(curr->name, next->name) >= 0 : ft_strcmp_lower(curr->name, next->name) <= 0);

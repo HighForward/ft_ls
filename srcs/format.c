@@ -61,7 +61,7 @@ struct ls_padding {
     long long total_blocks;
 };
 
-struct ls_padding handle_listing_padding(struct ls_node *dir_nodes) {
+struct ls_padding handle_listing_padding(struct ls_node *dir_nodes, ls_options *options) {
     ls_node *it = dir_nodes;
 
     struct ls_padding paddings;
@@ -70,6 +70,11 @@ struct ls_padding handle_listing_padding(struct ls_node *dir_nodes) {
     char *str_time = NULL;
 
     while (it) {
+
+        if (!options->all && ft_strlen(it->content->name) && it->content->name[0] == '.') {
+            it = it->next;
+            continue;
+        }
 
         int tmp_link_size = get_number_len(it->content->nb_link);
         if (paddings.link_size < tmp_link_size)
@@ -110,21 +115,34 @@ void print_listing(ls_node *nodes, ls_options *options) {
 
     ls_node *it = nodes;
 
-    struct ls_padding paddings = handle_listing_padding(nodes);
-
+    struct ls_padding paddings = handle_listing_padding(nodes, options);
     printf("total %lld\n", paddings.total_blocks);
     while (it)
     {
+
+        if (!options->all && ft_strlen(it->content->name) && it->content->name[0] == '.') {
+            it = it->next;
+            continue;
+        }
+
         if (options->blocks_size)
+        {
             printf("%*ld ", paddings.blocks_size, it->content->blocks);
+        }
 
         print_ls_perm_format(it->content);
 
-        printf(" %*d %*s %*s %*lld ",
+
+        printf(" %*d %*s ",
                paddings.link_size, it->content->nb_link,
-               paddings.u_name_size, it->content->u_name,
-               paddings.g_name_size, it->content->g_name,
-               paddings.octet_size, it->content->octets);
+               paddings.u_name_size, it->content->u_name);
+
+
+        if (options->not_print_group == 0) {
+            printf("%*s ", paddings.g_name_size, it->content->g_name);
+        }
+
+        printf("%*lld ", paddings.octet_size, it->content->octets);
 
         print_ls_time_format(it->content, paddings.time_size);
 

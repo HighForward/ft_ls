@@ -1,1 +1,0 @@
-ls -t -r sort by alphabetic when same date

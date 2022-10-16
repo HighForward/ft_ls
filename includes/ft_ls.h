@@ -47,7 +47,10 @@ typedef struct ls_options
     int rev;
     int sort_by_updated_time;
     int blocks_size;
+    int not_print_group;
+    int sort_file_size;
     char *base_path;
+    char **path;
 } ls_options;
 
 
@@ -60,7 +63,8 @@ int dir_is_not_dot(char *dir);
 char *get_dir_path(char *curr_path, char *curr_dir);
 ls_node *process_dir(DIR *dp, char *path, ls_options *options);
 void lst_add_node_sort(ls_node **alst, ls_node *new, ls_options *options);
-
+int load_listing(ls_content *content, char *path);
+ls_content *load_dir_data();
 
 /** ARGS **/
 int parse_args(int argc, char **argv, ls_options *options);
