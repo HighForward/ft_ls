@@ -23,7 +23,7 @@ void print_ls(ls_node *dir_nodes, char *path, ls_options *options) {
     }
 
     if (options->long_list)
-        print_listing(dir_nodes);
+        print_listing(dir_nodes, options);
     else
         print_simple(dir_nodes);
 

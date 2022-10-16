@@ -57,6 +57,8 @@ struct ls_padding {
     int g_name_size;
     int octet_size;
     int time_size;
+    int blocks_size;
+    long long total_blocks;
 };
 
 struct ls_padding handle_listing_padding(struct ls_node *dir_nodes) {
@@ -88,6 +90,15 @@ struct ls_padding handle_listing_padding(struct ls_node *dir_nodes) {
         if (ft_strnstr(str_time, "2022", ft_strlen(str_time)) == NULL)
             paddings.time_size = 5;
 
+        int tmp_blk_size = get_number_len(it->content->blocks);
+        if (paddings.blocks_size < tmp_blk_size)
+            paddings.blocks_size = tmp_blk_size;
+
+        if (paddings.link_size < tmp_link_size)
+            paddings.link_size = tmp_link_size;
+
+        if (paddings.blocks_size)
+            paddings.total_blocks += it->content->blocks;
 
         it = it->next;
     }
@@ -95,16 +106,18 @@ struct ls_padding handle_listing_padding(struct ls_node *dir_nodes) {
 }
 
 
-void print_listing(ls_node *nodes) {
+void print_listing(ls_node *nodes, ls_options *options) {
 
     ls_node *it = nodes;
-    long block_size = it ? it->content->blksize : 0;
-
-    printf("total %ld\n", block_size);
 
     struct ls_padding paddings = handle_listing_padding(nodes);
+
+    printf("total %lld\n", paddings.total_blocks);
     while (it)
     {
+        if (options->blocks_size)
+            printf("%*ld ", paddings.blocks_size, it->content->blocks);
+
         print_ls_perm_format(it->content);
 
         printf(" %*d %*s %*s %*lld ",
@@ -115,7 +128,12 @@ void print_listing(ls_node *nodes) {
 
         print_ls_time_format(it->content, paddings.time_size);
 
+        if (it->content->type == DT_DIR) blue();
+        if (it->content->type == DT_LNK) cyan();
+
         printf("%s", it->content->name);
+
+        reset();
 
         if (ft_strlen(it->content->sym_link) > 0) {
             printf(" -> %s", it->content->sym_link);

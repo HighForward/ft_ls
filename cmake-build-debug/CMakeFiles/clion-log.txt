@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/Forward/Desktop/42/ft_ls
+/sgoinfre/goinfre/Perso/mbrignol/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /mnt/nfs/homes/mbrignol/Desktop/ft_ls -B /mnt/nfs/homes/mbrignol/Desktop/ft_ls/cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: /mnt/c/Users/Forward/Desktop/42/ft_ls/cmake-build-debug
+-- Build files have been written to: /mnt/nfs/homes/mbrignol/Desktop/ft_ls/cmake-build-debug

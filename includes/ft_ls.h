@@ -25,6 +25,7 @@ typedef struct ls_content
     char *g_name;
     long long octets;
     __blksize_t blksize;
+    __blkcnt_t blocks;
     __mode_t perm;
     __time_t last_update;
     char sym_link[PATH_MAX];
@@ -45,6 +46,7 @@ typedef struct ls_options
     int all;
     int rev;
     int sort_by_updated_time;
+    int blocks_size;
     char *base_path;
 } ls_options;
 
@@ -66,7 +68,7 @@ int parse_args(int argc, char **argv, ls_options *options);
 
 /** OUTPUT **/
 void print_ls(ls_node *dir_nodes, char *path, ls_options *options);
-void print_listing(ls_node *dir_nodes);
+void print_listing(ls_node *nodes, ls_options *options);
 
 /** FORMAT **/
 void get_ls_time_format(ls_content *content, time_t time);
@@ -85,5 +87,13 @@ ls_node	*ls_lstnew(void *content);
 /** UTILS **/
 char *ft_strcat(char *dst, char *to_cat);
 int	ft_strcmp(char *s1, char *s2);
+int	ft_strcmp_lower(char *s1, char *s2);
+
+
+/** COLORS **/
+void yellow();
+void blue();
+void cyan();
+void reset();
 
 #endif

@@ -30,6 +30,8 @@ ls_content *load_dir_data(struct dirent *dir) {
     ft_bzero(content, sizeof(struct ls_content));
     content->name = dir->d_name;
     content->type = dir->d_type;
+    content->g_name = NULL;
+    content->u_name = NULL;
 
     return (content);
 }
@@ -65,11 +67,19 @@ int load_listing(ls_content *content, char *path) {
 
         free(dir_path);
 
+        struct passwd* puid = getpwuid(sb.st_uid);
+        struct group* guid = getgrgid(sb.st_gid);
+        struct group* group = getgrgid(guid->gr_gid);
+
         content->nb_link = sb.st_nlink;
-        content->u_name = getpwuid(sb.st_uid)->pw_name;
-        content->g_name = getgrgid(sb.st_gid)->gr_name;
+        content->u_name = puid->pw_name;
+
+
+        content->g_name = ft_strdup(guid->gr_name);
+
         content->octets = sb.st_size;
-        content->blksize = sb.st_blocks;
+        content->blksize = sb.st_blksize;
+        content->blocks = sb.st_blocks / 2;
         content->perm = sb.st_mode;
         content->last_update = sb.st_mtime;
     }
@@ -112,10 +122,9 @@ int trigger_insert(ls_content *curr, ls_content *next, ls_options *options) {
             curr->last_update <= next->last_update : curr->last_update >= next->last_update);
     } else {
         return (!options->rev ?
-            ft_strcmp(curr->name, next->name) >= 0 : ft_strcmp(curr->name, next->name) <= 0);
+            ft_strcmp_lower(curr->name, next->name) >= 0 : ft_strcmp_lower(curr->name, next->name) <= 0);
     }
 }
-
 
 void lst_add_node_sort(ls_node **alst, ls_node *new, ls_options *options)
 {

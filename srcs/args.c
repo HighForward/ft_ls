@@ -34,6 +34,8 @@ int parse_args(int argc, char **argv, ls_options *options)
             options->rev = 1;
         else if (ft_strcmp(arg, "-t") == 0)
             options->sort_by_updated_time = 1;
+        else if (ft_strcmp(arg, "-s") == 0)
+            options->blocks_size = 1;
         else if (!options->base_path)
             options->base_path = argv[i];
         i++;
