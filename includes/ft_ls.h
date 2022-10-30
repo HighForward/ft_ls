@@ -22,8 +22,8 @@
 typedef struct ls_content
 {
     char *name;
-    unsigned char type;
-    int nb_link;
+    __mode_t type;
+    unsigned long nb_link;
     char *u_name;
     char *g_name;
     long long octets;
@@ -81,6 +81,7 @@ int parse_args(int argc, char **argv, ls_options *options);
 void print_ls(ls_node *dir_nodes, char *path, ls_options *options);
 void print_listing(ls_node *nodes, ls_options *options);
 int has_next_item(ls_options *options);
+char insertQuotes(char *str);
 
 /** FORMAT **/
 void get_ls_time_format(ls_content *content, time_t time);

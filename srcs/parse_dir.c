@@ -41,33 +41,28 @@ ls_content *alloc_content_struct() {
     return (content);
 }
 
+int exit_stat_error(char *path) {
+    fprintf(stderr, "ls: cannot access '%s': %s\n", path, strerror(errno));
+    free(path);
+    return (EXIT_FAILURE);
+}
+
 int load_listing(ls_content *content, char *path) {
 
     if (content) {
+
         struct stat sb;
         ft_bzero(&sb, sizeof(struct stat));
 
         char *dir_path = get_dir_path(path, content->name);
 
-        if (content->type == DT_LNK) {
+        if (lstat(dir_path, &sb) < 0) {
+            return exit_stat_error(path);
+        }
 
-            if (lstat(dir_path, &sb) < 0) {
-                fprintf(stderr, "ls: cannot access '%s': %s\n", dir_path, strerror(errno));
-                free(dir_path);
-                return (EXIT_FAILURE);
-            }
-            ssize_t len = readlink(dir_path, content->sym_link, sizeof(content->sym_link) - 1);
-            if (len != -1) {
-                content->sym_link[len] = '\0';
-            }
-        } else {
-            if (stat(dir_path, &sb) < 0) {
-                fprintf(stderr, "ls: cannot access '%s': %s\n", dir_path, strerror(errno));
-                free(dir_path);
-                return (EXIT_FAILURE);
-            }
-            printf("MAJOR: %d - MINOR: %d\n", major(sb.st_rdev), minor(sb.st_rdev));
-
+        ssize_t len = readlink(dir_path, content->sym_link, sizeof(content->sym_link) - 1);
+        if (len != -1) {
+            content->sym_link[len] = '\0';
         }
 
         free(dir_path);
@@ -88,6 +83,9 @@ int load_listing(ls_content *content, char *path) {
             content->g_name = ft_strdup(guid->gr_name);
         }
 
+        content->major = major(sb.st_rdev);
+        content->minor = minor(sb.st_rdev);
+
         content->nb_link = sb.st_nlink;
         content->octets = sb.st_size;
         content->blksize = sb.st_blksize;
@@ -103,8 +101,7 @@ int load_data_and_insert_node(ls_node **nodes, ls_content *content, char* path, 
     if (load_listing(content, path)) {
         if (content->name)
             free(content->name);
-        if (content)
-            free(content);
+        free(content);
         return (EXIT_FAILURE);
     }
 
