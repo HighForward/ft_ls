@@ -67,7 +67,7 @@ void str_error(char *error);
 /** PARSE DIR **/
 int dir_is_not_dot(char *dir);
 char *get_dir_path(char *curr_path, char *curr_dir);
-ls_node *process_dir(DIR *dp, char *path, ls_options *options);
+int process_dir(DIR *dp, char *path, ls_node **nodes, ls_options *options);
 void lst_add_node_sort(ls_node **alst, ls_node *new, ls_options *options);
 int load_listing(ls_content *content, char *path);
 ls_content *alloc_content_struct();

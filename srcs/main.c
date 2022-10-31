@@ -1,38 +1,37 @@
 #include "../includes/ft_ls.h"
 
+int open_path(DIR *dp, char *path, ls_node **dir_nodes, ls_options *options) {
 
+    if (dp == NULL) {
+
+        if (errno == EACCES || errno == EBADF || errno == EMFILE || errno == ENOENT || errno == ENOMEM)
+        {
+            fprintf(stderr, "ls: cannot open directory '%s': %s\n", path, strerror(errno));
+            return (EXIT_SUCCESS);
+        }
+        else if (errno == ENOTDIR)
+        {
+            ls_content *content = alloc_content_struct();
+            load_data_and_insert_node(dir_nodes, content, path, options);
+            content->name = ft_strdup(path);
+        }
+    }
+    else
+    {
+        if (has_next_item(options) && ft_strcmp(path, options->base_path) != 0)
+            ft_putstr("\n");
+
+        process_dir(dp, path, dir_nodes, options);
+    }
+    return (EXIT_SUCCESS);
+}
 
 int process_ls(char *path, ls_options *options) {
 
     DIR *dp = opendir(path);
     ls_node *dir_nodes = NULL;
 
-//    S_ISREG(path.st_mode);
-
-    if (dp == NULL) {
-
-
-        //todo: handle errno here
-
-        if (errno == EACCES || errno == EBADF || errno == EMFILE || errno == ENOENT || errno == ENOMEM) {
-            fprintf(stderr, "ls: cannot open directory '%s': %s\n", path, strerror(errno));
-            return (EXIT_SUCCESS);
-        } else if (errno == ENOTDIR) {
-            // handle file here
-            //todo: how to know when a file is a link + handle file formating special char
-
-            ls_content *content = alloc_content_struct();
-            load_data_and_insert_node(&dir_nodes, content, path, options);
-            content->name = ft_strdup(path);
-        }
-    } else {
-        //handle dir here
-        if (has_next_item(options) && ft_strcmp(path, options->base_path) != 0) {
-            ft_putstr("\n");
-        }
-        dir_nodes = process_dir(dp, path, options);
-    }
-
+    open_path(dp, path, &dir_nodes, options);
 
     print_ls(dir_nodes, path, options);
 
@@ -57,11 +56,32 @@ int process_ls(char *path, ls_options *options) {
 
 
     free_nodes(dir_nodes);
-
+//
     if (dp != NULL)
         closedir(dp);
 
     return (EXIT_SUCCESS);
+}
+
+int exec_paths(ls_options *options) {
+    int i = double_array_len(options->paths);
+    int curr_index = i;
+    options->base_path = ".";
+    do
+    {
+        if (i > 0) {
+            options->base_path = options->paths[curr_index - 1];
+        }
+
+        if (process_ls(options->base_path, options))
+            return (EXIT_FAILURE);
+
+        curr_index--;
+
+        if (curr_index > 0)
+            printf("\n");
+
+    } while (curr_index > 0);
 }
 
 int main(int argc, char **argv)
@@ -72,24 +92,9 @@ int main(int argc, char **argv)
     if (parse_args(argc, argv + 1, &options))
         return (EXIT_FAILURE);
 
-    int i = double_array_len(options.paths);
-    int curr_index = i;
-    options.base_path = ".";
-    do
-    {
-        if (i > 0) {
-            options.base_path = options.paths[curr_index - 1];
-        }
-
-        if (process_ls(options.base_path, &options))
-            return (EXIT_FAILURE);
-
-        curr_index--;
-
-        if (curr_index > 0)
-            printf("\n");
-
-    } while (curr_index > 0);
+    if (exec_paths(&options)) {
+        return (EXIT_FAILURE);
+    }
 
     free(options.paths);
 

@@ -57,7 +57,7 @@ int load_listing(ls_content *content, char *path) {
         char *dir_path = get_dir_path(path, content->name);
 
         if (lstat(dir_path, &sb) < 0) {
-            return exit_stat_error(path);
+            return exit_stat_error(dir_path);
         }
 
         ssize_t len = readlink(dir_path, content->sym_link, sizeof(content->sym_link) - 1);
@@ -110,9 +110,8 @@ int load_data_and_insert_node(ls_node **nodes, ls_content *content, char* path, 
     return (EXIT_SUCCESS);
 }
 
-ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
+int process_dir(DIR *dp, char *path, ls_node **nodes, ls_options *options) {
 
-    ls_node *nodes = NULL;
     ls_content *content = NULL;
 
     struct dirent *dirp = NULL;
@@ -123,17 +122,16 @@ ls_node *process_dir(DIR *dp, char *path, ls_options *options) {
             continue;
 
         if (!(content = alloc_content_struct()))
-            return (NULL);
+            return (EXIT_FAILURE);
 
         content->name = ft_strdup(dirp->d_name);
         content->type = dirp->d_type;
 
-        if (load_data_and_insert_node(&nodes, content, path, options) == EXIT_FAILURE) {
+        if (load_data_and_insert_node(nodes, content, path, options) == EXIT_FAILURE) {
             continue;
         }
     }
-
-    return nodes;
+    return (EXIT_SUCCESS);
 }
 
 int trigger_insert(ls_content *curr, ls_content *next, ls_options *options) {
