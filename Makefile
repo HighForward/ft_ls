@@ -1,6 +1,8 @@
 SRCS		=	./srcs/main.c \
 				./srcs/format.c \
-				./srcs/error.c \
+				./srcs/alloc.c \
+				./srcs/dir_utils.c \
+				./srcs/nodes.c \
 				./srcs/parse_dir.c \
 				./srcs/free.c \
 				./srcs/output.c \

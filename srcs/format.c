@@ -2,14 +2,6 @@
 
 void print_ls_perm_format(ls_content *content) {
 
-//    if (S_ISDIR(content->type)) { putchar('d'); }
-//    else if (S_ISBLK(content->type)) { putchar('b'); }
-//    else if (S_ISCHR(content->type)) { putchar('c'); }
-//    else if (S_ISLNK(content->type)) { putchar('l'); }
-//    else if (S_ISFIFO(content->type)) { putchar('p'); }
-//    else if (S_ISSOCK(content->type)) { putchar('s'); }
-//    else { putchar('-'); }
-
     switch (content->perm & S_IFMT) {
         case S_IFBLK:  putchar('b');        break;
         case S_IFCHR:  putchar('c');        break;
@@ -39,39 +31,13 @@ void print_ls_time_format(ls_content *content, int time_padding) {
 
     printf("%.6s ", str_time + 4);
 
-//    if (ft_strcmp(str_time + (ft_strlen(str_time) - 5), "2022\n") != 0) {
-//        printf("%*.4s ", time_padding, str_time + (ft_strlen(str_time) - 5));
-//    } else {
-        printf("%*.5s ", time_padding, str_time + (ft_strlen(str_time) - 14));
-//    }
+    printf("%*.5s ", time_padding, str_time + (ft_strlen(str_time) - 14));
 
 }
-
 
 //http://manpagesfr.free.fr/man/man2/stat.2.html <- stat example
 //https://www.mkssoftware.com/docs/man1/ls.1.asp <- long listing infos
 
-int get_number_len(int nb) {
-
-    int i = 1;
-    while (nb >= 10) {
-        nb = nb / 10;
-        i++;
-    }
-    return (i);
-}
-
-struct ls_padding {
-    int link_size;
-    int u_name_size;
-    int g_name_size;
-    int octet_size;
-    int time_size;
-    int blocks_size;
-    long long total_blocks;
-    int minor_size;
-    int major_size;
-};
 
 int isNotRegularFile(unsigned char type) {
     return (type == DT_CHR || type == DT_SOCK || type == DT_BLK);
@@ -142,7 +108,9 @@ void print_listing(ls_node *nodes, ls_options *options) {
     ls_node *it = nodes;
 
     struct ls_padding paddings = handle_listing_padding(nodes, options);
+
     printf("total %lld\n", paddings.total_blocks);
+
     while (it)
     {
 
@@ -179,7 +147,7 @@ void print_listing(ls_node *nodes, ls_options *options) {
         if (it->content->type == DT_DIR) blue();
         if (it->content->type == DT_LNK) cyan();
 
-        const char quote = insertQuotes(it->content->name);
+        const char quote = insert_quotes(it->content->name);
         if (quote)
             printf("%c", quote);
         printf("%s", it->content->name);

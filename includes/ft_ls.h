@@ -59,10 +59,21 @@ typedef struct ls_options
     char **paths;
 } ls_options;
 
+struct ls_padding {
+    int link_size;
+    int u_name_size;
+    int g_name_size;
+    int octet_size;
+    int time_size;
+    int blocks_size;
+    long long total_blocks;
+    int minor_size;
+    int major_size;
+};
 
-/** ERRORS **/
-void str_error(char *error);
-
+/** ALLOC **/
+ls_node	*ls_lstnew(void *content);
+ls_content *alloc_content_struct();
 
 /** PARSE DIR **/
 int dir_is_not_dot(char *dir);
@@ -73,6 +84,18 @@ int load_listing(ls_content *content, char *path);
 ls_content *alloc_content_struct();
 int load_data_and_insert_node(ls_node **nodes, ls_content *content, char* path, ls_options *options);
 
+
+/** DIR UTILS **/
+int dir_is_not_dot(char *dir);
+char *get_dir_path(char *curr_path, char *curr_dir);
+int contains_special_char(char *str);
+char insert_quotes(char *str);
+
+
+/** NODES INSERTS **/
+int trigger_insert(ls_content *curr, ls_content *next, ls_options *options);
+void lst_add_node_sort(ls_node **alst, ls_node *new, ls_options *options);
+
 /** ARGS **/
 int parse_args(int argc, char **argv, ls_options *options);
 
@@ -81,27 +104,20 @@ int parse_args(int argc, char **argv, ls_options *options);
 void print_ls(ls_node *dir_nodes, char *path, ls_options *options);
 void print_listing(ls_node *nodes, ls_options *options);
 int has_next_item(ls_options *options);
-char insertQuotes(char *str);
+char insert_quotes(char *str);
 
-/** FORMAT **/
-void get_ls_time_format(ls_content *content, time_t time);
 
 /** FREE **/
 void free_nodes(ls_node *nodes);
-void free_split(char **split);
+void free_ptr(void *ptr);
 
-
-/** RECURSIVE **/
-
-
-/** LST UTILS **/
-ls_node	*ls_lstnew(void *content);
 
 /** UTILS **/
 char *ft_strcat(char *dst, char *to_cat);
 int	ft_strcmp(char *s1, char *s2);
 int	ft_strcmp_lower(char *s1, char *s2);
 int double_array_len(char **arr);
+int get_number_len(int nb);
 
 /** COLORS **/
 void yellow();

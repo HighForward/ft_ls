@@ -2,7 +2,8 @@
 
 int open_path(DIR *dp, char *path, ls_node **dir_nodes, ls_options *options) {
 
-    if (dp == NULL) {
+    if (dp == NULL)
+    {
 
         if (errno == EACCES || errno == EBADF || errno == EMFILE || errno == ENOENT || errno == ENOMEM)
         {
@@ -12,8 +13,8 @@ int open_path(DIR *dp, char *path, ls_node **dir_nodes, ls_options *options) {
         else if (errno == ENOTDIR)
         {
             ls_content *content = alloc_content_struct();
-            load_data_and_insert_node(dir_nodes, content, path, options);
             content->name = ft_strdup(path);
+            load_data_and_insert_node(dir_nodes, content, path, options);
         }
     }
     else
@@ -56,7 +57,6 @@ int process_ls(char *path, ls_options *options) {
 
 
     free_nodes(dir_nodes);
-//
     if (dp != NULL)
         closedir(dp);
 
@@ -96,7 +96,7 @@ int main(int argc, char **argv)
         return (EXIT_FAILURE);
     }
 
-    free(options.paths);
+    free_ptr(options.paths);
 
     return (1);
 }

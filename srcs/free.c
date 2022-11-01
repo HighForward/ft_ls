@@ -1,5 +1,9 @@
 #include "../includes/ft_ls.h"
 
+void free_ptr(void *ptr) {
+    if (ptr)
+        free(ptr);
+}
 
 void free_nodes(ls_node *nodes)
 {
@@ -26,18 +30,4 @@ void free_nodes(ls_node *nodes)
         }
         nodes = NULL;
     }
-}
-
-void free_split(char **split)
-{
-    int i;
-
-    i = 0;
-    while (split[i])
-    {
-        if (split[i])
-            free(split[i]);
-        i++;
-    }
-    free(split);
 }

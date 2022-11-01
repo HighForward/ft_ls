@@ -1,18 +1,5 @@
 #include "../includes/ft_ls.h"
 
-ls_node	*ls_lstnew(void *content)
-{
-    ls_node *new;
-
-    if (!(new = (ls_node*)malloc(sizeof(ls_node))))
-        return (NULL);
-    ft_bzero(new, sizeof(struct ls_node));
-    new->content = content;
-    new->next = NULL;
-    return (new);
-}
-
-
 char *ft_strcat(char *dst, char *to_cat) {
 
     int i = 0;
@@ -41,9 +28,12 @@ int	ft_strcmp_lower(char *s1, char *s2)
     int i;
     int y;
 
-
     i = 0;
     y = 0;
+
+    if (!s1 || !s2)
+        return (0);
+
     while (s1[i] != '\0' && s2[y] != '\0') {
 
         while (s1[i] && !ft_isalnum(s1[i])) {
@@ -54,17 +44,34 @@ int	ft_strcmp_lower(char *s1, char *s2)
             y++;
         }
 
-        if (ft_tolower(s1[i]) != ft_tolower(s2[y])) {
+        if (s1[i] && s2[y] && ft_tolower(s1[i]) != ft_tolower(s2[y])) {
             return (ft_tolower(s1[i]) - ft_tolower(s2[y]));
         }
 
-        i++;
-        y++;
+        if (s1[i] && ft_isalnum(s1[i]))
+            i++;
+        if (s2[y] && ft_isalnum(s2[y]))
+            y++;
     }
+
+    if (i == ft_strlen(s1) && y == ft_strlen(s2)) {
+        return (i - y);
+    }
+
     return (ft_tolower(s1[i]) - ft_tolower(s2[y]));
+
 }
 
-#include <stdio.h>
+int get_number_len(int nb) {
+
+    int i = 1;
+    while (nb >= 10) {
+        nb = nb / 10;
+        i++;
+    }
+    return (i);
+}
+
 void red () {
     printf("\033[1;31m");
 }
