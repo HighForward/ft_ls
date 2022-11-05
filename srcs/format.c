@@ -109,7 +109,8 @@ void print_listing(ls_node *nodes, ls_options *options) {
 
     struct ls_padding paddings = handle_listing_padding(nodes, options);
 
-    printf("total %lld\n", paddings.total_blocks);
+    if (options->not_print_total == 0)
+        printf("total %lld\n", paddings.total_blocks);
 
     while (it)
     {
@@ -144,8 +145,8 @@ void print_listing(ls_node *nodes, ls_options *options) {
 
         print_ls_time_format(it->content, paddings.time_size);
 
-        if (it->content->type == DT_DIR) blue();
-        if (it->content->type == DT_LNK) cyan();
+//        if (it->content->type == DT_DIR) blue();
+//        if (it->content->type == DT_LNK) cyan();
 
         const char quote = insert_quotes(it->content->name);
         if (quote)
@@ -154,7 +155,7 @@ void print_listing(ls_node *nodes, ls_options *options) {
         if (quote)
             printf("%c", quote);
 
-        reset();
+//        reset();
 
         if (ft_strlen(it->content->sym_link) > 0) {
             printf(" -> %s", it->content->sym_link);

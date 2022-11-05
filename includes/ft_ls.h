@@ -54,6 +54,7 @@ typedef struct ls_options
     int sort_by_updated_time;
     int blocks_size;
     int not_print_group;
+    int not_print_total;
     int sort_file_size;
     char *base_path;
     char **paths;

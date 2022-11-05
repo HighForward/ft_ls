@@ -4,32 +4,47 @@ ERROR=0
 SUCCESS=0
 
 log_success() {
-  echo "SUCCESS: " $1
+  echo "SUCCESS:" $1
   SUCCESS=$((SUCCESS+1))
 }
 
 log_error() {
-    echo "ERROR: " $1
+    echo "ERROR:" $1
       ERROR=$((ERROR+1))
 }
 
-assert_cmd () {
+assert_paths () {
 
-  REAL=$(ls $1 | wc -l)
-  FAKE=$(./ft_ls $1 | wc -l)
+  REAL=$(ls $1 2> /dev/null | wc -w )
+  FAKE=$(./ft_ls $1 2> /dev/null | wc -w)
 
-  [[ $REAL -eq $FAKE ]] && log_success $1 || log_error $1
+  [ "$REAL" = "$FAKE" ] && log_success "$1" || log_error "$1"
 }
 
+assert_unit () {
 
-assert_cmd "/bin -l"
+  REAL=$(ls $1 2> /dev/null | wc -w )
+  FAKE=$(./ft_ls $1 2> /dev/null | wc -w)
 
+  [ "$REAL" = "$FAKE" ] && log_success "$1" || log_error "$1"
+}
+
+assert_paths " -laRts"
+
+
+assert_paths " -l"
+assert_paths "/bin -l"
+assert_paths "/dev -l"
+assert_paths "/etc -l"
+assert_paths "/dev -la"
+assert_paths "/dev -Ra"
+assert_paths "/dev /bin -Ra"
+
+assert_unit "test_basic_dir -l"
+assert_unit "test_basic_file -l"
+assert_unit "test_empty -l"
+assert_unit "test_symlink -l"
+assert_unit "test_recursive -Rl"
 
 echo "TOTAL ERROR: " $ERROR
 echo "TOTAL SUCCESS: " $SUCCESS
-
-#if [ $(ls -l | wc -l) == $(./ft_ls -l | wc -l) ]; then
-#	echo "OK"
-#else
-#	echo "NOT OK"
-#fi

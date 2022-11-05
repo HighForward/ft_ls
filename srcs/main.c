@@ -4,14 +4,14 @@ int open_path(DIR *dp, char *path, ls_node **dir_nodes, ls_options *options) {
 
     if (dp == NULL)
     {
-
-        if (errno == EACCES || errno == EBADF || errno == EMFILE || errno == ENOENT || errno == ENOMEM)
+        if (errno == EACCES || errno == EBADF || errno == EMFILE || errno == ENOMEM)
         {
             fprintf(stderr, "ls: cannot open directory '%s': %s\n", path, strerror(errno));
-            return (EXIT_SUCCESS);
+            return (EXIT_FAILURE);
         }
-        else if (errno == ENOTDIR)
+        else if (errno == ENOTDIR || errno == ENOENT)
         {
+            options->not_print_total = 1;
             ls_content *content = alloc_content_struct();
             content->name = ft_strdup(path);
             load_data_and_insert_node(dir_nodes, content, path, options);
@@ -32,7 +32,9 @@ int process_ls(char *path, ls_options *options) {
     DIR *dp = opendir(path);
     ls_node *dir_nodes = NULL;
 
-    open_path(dp, path, &dir_nodes, options);
+    if (open_path(dp, path, &dir_nodes, options)) {
+        return (EXIT_SUCCESS);
+    }
 
     print_ls(dir_nodes, path, options);
 
